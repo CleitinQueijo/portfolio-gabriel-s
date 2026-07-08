@@ -178,28 +178,28 @@ export default function Home() {
                 desc: "Sistema completo de gerenciamento de estoque e relatórios. TCC desenvolvido com foco em automação empresarial.",
                 tech: ["React", "TypeScript", "Node.js", "MySQL"],
                 link: "https://rushy.vercel.app/",
-                img: "/manus-storage/rushy_ee9e9574.png"
+                img: "/projects/rushy.png"
               },
               {
                 title: "Path of Pages",
                 desc: "Jogo interativo de parkour desenvolvido com Canvas API. 10 níveis de pura diversão e desafio técnico.",
                 tech: ["HTML5", "JavaScript", "Canvas", "CSS3"],
                 link: "https://rodriguessoaresarthurmiguel-lgtm.github.io/Path_of-Pages/",
-                img: "/manus-storage/path-of-pages_1d958094.png"
+                img: "/projects/path-of-pages.png"
               },
               {
                 title: "Tetrix",
                 desc: "O clássico Tetris recriado com mecânicas fluidas e sistema de pontuação progressiva.",
                 tech: ["HTML5", "CSS3", "JavaScript"],
                 link: "https://cleitinqueijo.github.io/Tetrix/",
-                img: "/manus-storage/tetrix_0af7f1b4.png"
+                img: "/projects/tetrix.png"
               },
               {
                 title: "Sistema Sabores",
                 desc: "Plataforma de gestão gastronômica em desenvolvimento, focada em otimização de pedidos e estoque.",
                 tech: ["React", "Tailwind", "Firebase"],
                 link: "#",
-                img: "/manus-storage/tetrix_0af7f1b4.png", // Placeholder
+                img: "/projects/sistema-sabores.png",
                 dev: true
               }
             ].map((p, i) => (
@@ -260,7 +260,7 @@ export default function Home() {
             >
               <h2 className="text-4xl md:text-5xl font-black mb-8 tracking-tight">Sobre Mim</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
-                Minha jornada no desenvolvimento começou no <span className="text-foreground font-bold">SENAI</span>, onde descobri minha paixão por criar interfaces que não apenas funcionam, mas encantam.
+                Minha jornada no desenvolvimento começou no <span className="text-foreground font-bold">SENAI</span>, onde descobri minha passion por criar interfaces que não apenas funcionam, mas encantam.
               </p>
               <p className="text-muted-foreground mb-10 leading-relaxed text-lg">
                 Acredito que o design é a alma de qualquer software. Por isso, dedico grande parte do meu tempo aperfeiçoando minhas habilidades em <span className="text-accent font-bold">CSS</span> e arquitetura de componentes, sempre buscando o equilíbrio entre estética e performance.
@@ -310,88 +310,106 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">Vamos Conversar?</h2>
-            <p className="text-muted-foreground text-lg">Estou aberto a novas oportunidades e colaborações</p>
+            <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">Contato</h2>
+            <div className="w-20 h-1.5 bg-accent mx-auto rounded-full mb-6"></div>
+            <p className="text-muted-foreground text-lg">Vamos construir algo incrível juntos?</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-5 gap-12">
-            <div className="md:col-span-2 space-y-8">
-              <div className="p-8 bg-card/30 border border-border/50 rounded-3xl space-y-8">
-                <div className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-background transition-all">
-                    <Mail size={24} />
-                  </div>
-                  <div>
-                    <div className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">Email</div>
-                    <a href="mailto:gabrieldossantospereira56@gmail.com" className="font-bold hover:text-accent transition-colors break-all text-sm">
-                      gabrieldossantospereira56@gmail.com
-                    </a>
-                  </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-1 space-y-6"
+            >
+              <div className="p-8 bg-card/30 border border-border/50 rounded-3xl hover:border-accent/30 transition-all group">
+                <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                  <Mail size={24} />
                 </div>
-
-                <div className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-background transition-all">
-                    <Github size={24} />
-                  </div>
-                  <div>
-                    <div className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">GitHub</div>
-                    <a href="https://github.com/CleitinQueijo" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-accent transition-colors">
-                      github.com/CleitinQueijo
-                    </a>
-                  </div>
-                </div>
+                <h4 className="text-sm uppercase tracking-widest text-muted-foreground font-bold mb-2">Email</h4>
+                <p className="font-bold break-all">gabriel@exemplo.com</p>
               </div>
-            </div>
 
-            <div className="md:col-span-3">
-              <form onSubmit={handleContactSubmit} className="space-y-4">
-                {formStatus !== "idle" && (
+              <div className="p-8 bg-card/30 border border-border/50 rounded-3xl hover:border-accent/30 transition-all group">
+                <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                  <Github size={24} />
+                </div>
+                <h4 className="text-sm uppercase tracking-widest text-muted-foreground font-bold mb-2">GitHub</h4>
+                <p className="font-bold">github.com/CleitinQueijo</p>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-2"
+            >
+              <form onSubmit={handleContactSubmit} className="space-y-6 bg-card/30 border border-border/50 p-10 rounded-[40px]">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Nome</label>
+                    <input 
+                      name="name"
+                      type="text" 
+                      placeholder="Seu nome"
+                      className="w-full bg-background/50 border border-border/50 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent/50 transition-colors"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Email</label>
+                    <input 
+                      name="email"
+                      type="email" 
+                      placeholder="seu@email.com"
+                      className="w-full bg-background/50 border border-border/50 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent/50 transition-colors"
+                    />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">Mensagem</label>
+                  <textarea 
+                    name="message"
+                    rows={4} 
+                    placeholder="Como posso ajudar?"
+                    className="w-full bg-background/50 border border-border/50 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent/50 transition-colors resize-none"
+                  ></textarea>
+                </div>
+                
+                {formMessage && (
                   <motion.div 
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    className={`p-4 rounded-2xl text-sm font-bold ${formStatus === "success" ? "bg-accent/10 text-accent border border-accent/20" : "bg-red-500/10 text-red-400 border border-red-500/20"}`}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`p-4 rounded-2xl text-sm font-medium ${formStatus === "success" ? "bg-accent/10 text-accent border border-accent/20" : "bg-destructive/10 text-destructive border border-destructive/20"}`}
                   >
                     {formMessage}
                   </motion.div>
                 )}
-                <div className="grid grid-cols-2 gap-4">
-                  <input
-                    name="name"
-                    placeholder="Seu Nome"
-                    className="w-full bg-card/50 border border-border/50 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent/50 transition-colors"
-                  />
-                  <input
-                    name="email"
-                    type="email"
-                    placeholder="Seu Email"
-                    className="w-full bg-card/50 border border-border/50 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent/50 transition-colors"
-                  />
-                </div>
-                <textarea
-                  name="message"
-                  placeholder="Sua Mensagem"
-                  rows={5}
-                  className="w-full bg-card/50 border border-border/50 rounded-2xl px-6 py-4 focus:outline-none focus:border-accent/50 transition-colors resize-none"
-                />
+
                 <Button 
                   type="submit"
-                  className="w-full bg-accent hover:bg-accent/90 text-background font-black h-14 rounded-2xl transition-all hover:shadow-[0_0_30px_rgba(0,245,155,0.2)]"
+                  className="w-full bg-accent hover:bg-accent/90 text-background font-bold h-14 rounded-2xl transition-all shadow-[0_0_20px_rgba(0,245,155,0.1)]"
                 >
                   Enviar Mensagem
                 </Button>
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border/30 text-center">
-        <div className="container mx-auto px-6">
+      <footer className="py-12 px-6 border-t border-border/50">
+        <div className="container mx-auto text-center">
+          <div className="flex justify-center gap-6 mb-8">
+            <a href="#" className="text-muted-foreground hover:text-accent transition-colors"><Github size={20} /></a>
+            <a href="#" className="text-muted-foreground hover:text-accent transition-colors"><Mail size={20} /></a>
+            <a href="#" className="text-muted-foreground hover:text-accent transition-colors"><MessageSquare size={20} /></a>
+          </div>
           <p className="text-muted-foreground text-sm font-medium">
-            © {new Date().getFullYear()} <span className="text-foreground">Gabriel S</span>. Feito com paixão e código.
+            © {new Date().getFullYear()} Gabriel S. Desenvolvido com <span className="text-accent">React</span> & <span className="text-accent">Tailwind</span>
           </p>
         </div>
       </footer>
