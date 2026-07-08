@@ -178,28 +178,28 @@ export default function Home() {
                 desc: "Sistema completo de gerenciamento de estoque e relatórios. TCC desenvolvido com foco em automação empresarial.",
                 tech: ["React", "TypeScript", "Node.js", "MySQL"],
                 link: "https://rushy.vercel.app/",
-                img: "/projects/rushy.png"
+                img: `${import.meta.env.BASE_URL}projects/rushy.png`
               },
               {
                 title: "Path of Pages",
                 desc: "Jogo interativo de parkour desenvolvido com Canvas API. 10 níveis de pura diversão e desafio técnico.",
                 tech: ["HTML5", "JavaScript", "Canvas", "CSS3"],
                 link: "https://rodriguessoaresarthurmiguel-lgtm.github.io/Path_of-Pages/",
-                img: "/projects/path-of-pages.png"
+                img: `${import.meta.env.BASE_URL}projects/path-of-pages.png`
               },
               {
                 title: "Tetrix",
                 desc: "O clássico Tetris recriado com mecânicas fluidas e sistema de pontuação progressiva.",
                 tech: ["HTML5", "CSS3", "JavaScript"],
                 link: "https://cleitinqueijo.github.io/Tetrix/",
-                img: "/projects/tetrix.png"
+                img: `${import.meta.env.BASE_URL}projects/tetrix.png`
               },
               {
                 title: "Sistema Sabores",
                 desc: "Plataforma de gestão gastronômica em desenvolvimento, focada em otimização de pedidos e estoque.",
                 tech: ["React", "Tailwind", "Firebase"],
                 link: "#",
-                img: "/projects/sistema-sabores.png",
+                img: `${import.meta.env.BASE_URL}projects/sistema-sabores.png`,
                 dev: true
               }
             ].map((p, i) => (
