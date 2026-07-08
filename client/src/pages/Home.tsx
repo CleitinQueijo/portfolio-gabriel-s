@@ -1,12 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Github, Mail, ExternalLink, Code2, Briefcase, BookOpen, MessageSquare, Laptop, GraduationCap, Zap } from "lucide-react";
+import { Github, Mail, ExternalLink, Code2, Briefcase, BookOpen, MessageSquare, Laptop, GraduationCap, Zap, Truck, Utensils, LayoutGrid, Library } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import rushyImg from "@/assets/projects/rushy.png";
-import pathOfPagesImg from "@/assets/projects/path-of-pages.png";
-import tetrixImg from "@/assets/projects/tetrix.png";
-import sistemaSaboresImg from "@/assets/projects/sistema-sabores.png";
 
 export default function Home() {
   const [formMessage, setFormMessage] = useState("");
@@ -182,29 +178,29 @@ export default function Home() {
                 desc: "Sistema completo de gerenciamento de estoque e relatórios. TCC desenvolvido com foco em automação empresarial.",
                 tech: ["React", "TypeScript", "Node.js", "MySQL"],
                 link: "https://rushy.vercel.app/",
-                img: rushyImg
+                icon: <Truck className="w-20 h-20" />
               },
               {
                 title: "Path of Pages",
                 desc: "Jogo interativo de parkour desenvolvido com Canvas API. 10 níveis de pura diversão e desafio técnico.",
                 tech: ["HTML5", "JavaScript", "Canvas", "CSS3"],
                 link: "https://rodriguessoaresarthurmiguel-lgtm.github.io/Path_of-Pages/",
-                img: pathOfPagesImg
+                icon: <Library className="w-20 h-20" />
               },
               {
                 title: "Tetrix",
                 desc: "O clássico Tetris recriado com mecânicas fluidas e sistema de pontuação progressiva.",
                 tech: ["HTML5", "CSS3", "JavaScript"],
                 link: "https://cleitinqueijo.github.io/Tetrix/",
-                img: tetrixImg
+                icon: <LayoutGrid className="w-20 h-20" />
               },
               {
                 title: "Sistema Sabores",
                 desc: "Plataforma de gestão gastronômica em desenvolvimento, focada em otimização de pedidos e estoque.",
                 tech: ["React", "Tailwind", "Firebase"],
-                link: "#",
-                img: sistemaSaboresImg,
-                dev: true
+                link: "https://cleitinqueijo.github.io/sabores/",
+                icon: <Utensils className="w-20 h-20" />,
+                dev: false
               }
             ].map((p, i) => (
               <motion.div
@@ -215,12 +211,10 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
               >
                 <Card className="bg-card/30 border-border/50 hover:border-accent/50 transition-all duration-500 p-0 overflow-hidden group h-full flex flex-col">
-                  <div className="relative overflow-hidden h-60">
-                    <img 
-                      src={p.img} 
-                      alt={p.title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                    />
+                  <div className="relative overflow-hidden h-60 bg-accent/5 flex items-center justify-center text-accent/40 group-hover:text-accent transition-all duration-700">
+                    <div className="transition-transform duration-700 group-hover:scale-110">
+                      {p.icon}
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
                   </div>
                   <div className="p-8 flex flex-col flex-grow">
